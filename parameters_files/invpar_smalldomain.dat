@@ -1,0 +1,35 @@
+boundary_data_in_Laplace_domain			/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/SmallDomain/boundarydata_s20.00_10.00_10.m
+file_with_total_wave_of_the_simulated_object	/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/SmallDomain/object/lap_ExactFEM_s20.00.m
+file_with_incident_wave_in_homogeneous_medium	/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/SmallDomain/hom/lap_ExactFEM_s20.00.m
+pseudo_frequency_interval			10.00 20.00
+number_pseudo_frequencies_not_include_s_max	10
+Carleman_weighting_parameter			20 40 80 80 100 100 200 200 200 200
+Regularization_parameter_epsilon		0 0 0 0 0 0 0 0 0 0
+Maximum_number_of_iterations			10 7 7 7 7 7 4 4 4 4
+Lower_upper_bound_of_coefficient		1.05 7.0
+Type_of_boundary_measurement			z_max
+Coefficient_is_unkown_in_the_region		-0.04 0.04 -0.05 0.05 -0.06 0.02
+Choice_of_first_tail				hommogeneous
+
+
+// Explanation:
+- measured boundary data: scattered wave which is measured (or simulated) on the boundary of the FEM domain. 
+Note that the full boundary data is required. If data on some part of the boundary is missing, replace them with zero. This data is given in the Laplace trasform domain (or the boundary value of function q) and the first tail (The last row). 
+
+- File with total wave of the object is optional, can be used to test the case of using the true tail function, but not used otherwise. This data is in the 
+Laplace transform domain.
+
+- File with total wave in homogeneous medium: this is the incidient wave actually! We want to use the file to elliminate the error in the 
+forward solver. We can use the analytic form of the incidient wave, but this causes some error in calculating the scattered wave. The data is in the Laplace
+transform domain.
+
+
+s_max: not used in the calculation of the function q and coefficient. 
+
+Type of boundary measurement: depends on the measurement: back scattered wave or transmitted wave.
+"x_max", "x_min", "y_max", "y_min", "z_max", "z_min" or "all". All means using all boundary measurement. 
+
+Unknown region of the coefficient: here we restrict the reconstruction to a subdomain of the FEM domain. The parameters are:
+x_min x_max y_min y_max z_min z_max
+
+Choice of first tail: amongs "homogeneous", "exact" or "model2". Default: homogeneous medium

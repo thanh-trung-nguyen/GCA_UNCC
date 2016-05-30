@@ -1,0 +1,44 @@
+01-Number_of_space_dimension		3
+02-FDM_grid_file			/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/parameters/grid_smalldomain.inp
+022-FEM_grid_file			/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/parameters/grid_smalldomain.inp
+03-FEM_boundary_grid_file		/home/thanhnguyen/UNCC_2012/programs/WORK_GCA/parameters/grid_smalldomain_boundary.inp
+04-FDM_domain_parameters	 	61 61 41 0.01 0.01 0.01 -0.30 -0.30 -0.20
+05-FEM_domain_parameters	 	41 41 11 0.01 0.01 0.01 -0.20 -0.20 -0.06
+06-USE_FDM_FEM_Exchange 	 	1
+07-USE_FEM       		 	0 
+08-USE_FDM       		 	0
+09-USE_RHS       		 	0
+10-USE_DIR_FEM 		         	0 
+11-USE_DIR_FDM   		 	0  
+12-USE_ABSORB    		 	1  
+13-PRINT_FILES			 	0
+14-Number_of_time_steps		 	600
+15-maxtime			 	1.8
+16-right_hand_side_code		 	1.0
+17-Type_of_boundary_condition	 	planewave_z_max
+18-relative_noise_level		 	0.0
+19-frequency_incident_wave	 	21
+20-points_save_data_on_z_axis    	0.04	     0.08 	0.10 	  0.18
+21-file_of_saved_data_on_z_axis  	Sol_Z4.m Sol_Z8.m Sol_Z10.m Sol_Z18.m
+22-Number_of_objects		 	1
+23-Type_of_object		 	prism 
+24-Type_of_material_object	 	4
+25-Velocity_object			4.28
+26-Center_coordinates_and_radius 	-0.021	0.021	-0.041	0.041	-0.041	0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+04-FDM_domain_parameters	 	61 61 41 0.01 0.01 0.01 -0.30 -0.30 -0.20
+05-FEM_domain_parameters	 	41 41 15 0.01 0.01 0.01 -0.20 -0.20 -0.10
